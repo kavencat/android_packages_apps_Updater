@@ -43,7 +43,9 @@ import com.cherish.updater.misc.StringGenerator;
 import com.cherish.updater.misc.Utils;
 import com.cherish.updater.model.UpdateInfo;
 import com.cherish.updater.model.UpdateStatus;
+import com.cherish.updater.model.Update;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.NumberFormat;
@@ -122,8 +124,9 @@ public class UpdaterService extends Service {
                     setNotificationTitle(update);
                     handleInstallProgress(update);
                 } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
+                    final boolean isLocalUpdate = Update.LOCAL_ID.equals(downloadId);
                     Bundle extras = mNotificationBuilder.getExtras();
-                    if (extras != null && downloadId.equals(
+                    if (extras != null && !isLocalUpdate && downloadId.equals(
                             extras.getString(UpdaterController.EXTRA_DOWNLOAD_ID))) {
                         mNotificationBuilder.setExtras(null);
                         UpdateInfo update = mUpdaterController.getUpdate(downloadId);
@@ -409,7 +412,9 @@ public class UpdaterService extends Service {
 
                 SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
                 boolean deleteUpdate = pref.getBoolean(Constants.PREF_AUTO_DELETE_UPDATES, false);
-                if (deleteUpdate) {
+                boolean isLocal = Update.LOCAL_ID.equals(update.getDownloadId());
+                // Always delete local updates
+                if (deleteUpdate || isLocal) {
                     mUpdaterController.deleteUpdate(update.getDownloadId());
                 }
 
