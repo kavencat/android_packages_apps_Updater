@@ -75,7 +75,7 @@
             android:singleLine="true"
             android:textColor="?android:textColorSecondary"
             android:textSize="18sp"
-            tools:text="PixelExperience_device-10.0-20200115-2020-OFFICIAL.zip" />
+            tools:text="Cherish-OS-v1.x-20200424-0832-device-OFFICIAL.zip" />
 
         <TextView
             android:id="@+id/build_date"
