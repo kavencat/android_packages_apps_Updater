@@ -35,7 +35,7 @@ public final class Constants {
     static final String PROP_AB_DEVICE = "ro.build.ab_update";
     static final String PROP_DEVICE = "ro.cherish.device";
     static final String PROP_BUILD_VERSION = "ro.cherish.version";
-    static final String OTA_URL = "https://raw.githubusercontent.com/CherishOS-Devices/OTA/ten/%s.json";
-    static final String DOWNLOAD_WEBPAGE_URL = "https://raw.githubusercontent.com/CherishOS-Devices/OTA/ten/%s.md";
+    static final String OTA_URL = "https://raw.githubusercontent.com/hungphan2001/OTA/ten/%s.json";
+    static final String DOWNLOAD_WEBPAGE_URL = "https://raw.githubusercontent.com/hungphan2001/OTA/ten/%s.txt";
     static final String EXPORT_PATH = "Cherish-Updates/";
 }
