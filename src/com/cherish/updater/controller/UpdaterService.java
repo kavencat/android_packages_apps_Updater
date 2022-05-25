@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pixelplusui.updater.controller;
+package com.cherish.updater.controller;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -34,15 +34,15 @@ import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.PreferenceManager;
 
-import com.pixelplusui.updater.R;
-import com.pixelplusui.updater.UpdaterReceiver;
-import com.pixelplusui.updater.UpdatesActivity;
-import com.pixelplusui.updater.misc.BuildInfoUtils;
-import com.pixelplusui.updater.misc.Constants;
-import com.pixelplusui.updater.misc.StringGenerator;
-import com.pixelplusui.updater.misc.Utils;
-import com.pixelplusui.updater.model.UpdateInfo;
-import com.pixelplusui.updater.model.UpdateStatus;
+import com.cherish.updater.R;
+import com.cherish.updater.UpdaterReceiver;
+import com.cherish.updater.UpdatesActivity;
+import com.cherish.updater.misc.BuildInfoUtils;
+import com.cherish.updater.misc.Constants;
+import com.cherish.updater.misc.StringGenerator;
+import com.cherish.updater.misc.Utils;
+import com.cherish.updater.model.UpdateInfo;
+import com.cherish.updater.model.UpdateStatus;
 
 import java.io.IOException;
 import java.text.DateFormat;

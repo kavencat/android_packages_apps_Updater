@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pixelplusui.updater;
+package com.cherish.updater;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -47,15 +47,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import com.pixelplusui.updater.controller.UpdaterController;
-import com.pixelplusui.updater.controller.UpdaterService;
-import com.pixelplusui.updater.misc.BuildInfoUtils;
-import com.pixelplusui.updater.misc.Constants;
-import com.pixelplusui.updater.misc.PermissionsUtils;
-import com.pixelplusui.updater.misc.StringGenerator;
-import com.pixelplusui.updater.misc.Utils;
-import com.pixelplusui.updater.model.UpdateInfo;
-import com.pixelplusui.updater.model.UpdateStatus;
+import com.cherish.updater.controller.UpdaterController;
+import com.cherish.updater.controller.UpdaterService;
+import com.cherish.updater.misc.BuildInfoUtils;
+import com.cherish.updater.misc.Constants;
+import com.cherish.updater.misc.PermissionsUtils;
+import com.cherish.updater.misc.StringGenerator;
+import com.cherish.updater.misc.Utils;
+import com.cherish.updater.model.UpdateInfo;
+import com.cherish.updater.model.UpdateStatus;
 
 import java.io.File;
 import java.io.IOException;

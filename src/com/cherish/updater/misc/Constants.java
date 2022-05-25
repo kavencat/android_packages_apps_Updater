@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pixelplusui.updater.misc;
+package com.cherish.updater.misc;
 
 public final class Constants {
 
@@ -39,7 +39,7 @@ public final class Constants {
 
     public static final String PROP_AB_DEVICE = "ro.build.ab_update";
     public static final String PROP_BUILD_DATE = "ro.system.build.date.utc";
-    public static final String PROP_BUILD_VERSION = "org.pixelplusui.version";
+    public static final String PROP_BUILD_VERSION = "ro.cherish.version";
     public static final String PROP_DEVICE = "ro.build.product";
     public static final String PROP_NEXT_DEVICE = "ro.updater.next_device";
 

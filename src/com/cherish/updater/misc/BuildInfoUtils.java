@@ -13,30 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pixelplusui.updater.model;
+package com.cherish.updater.misc;
 
-public enum UpdateStatus {
-    UNKNOWN,
-    STARTING,
-    DOWNLOADING,
-    DOWNLOADED,
-    PAUSED,
-    PAUSED_ERROR,
-    DELETED,
-    VERIFYING,
-    VERIFIED,
-    VERIFICATION_FAILED,
-    INSTALLING,
-    INSTALLED,
-    INSTALLATION_FAILED,
-    INSTALLATION_CANCELLED,
-    INSTALLATION_SUSPENDED,
-    REMOVED;
+import android.os.SystemProperties;
 
-    public static final class Persistent {
-        public static final int UNKNOWN = 0;
-        public static final int INCOMPLETE = 1;
-        public static final int VERIFIED = 2;
-        public static final int LOCAL = 3;
+public final class BuildInfoUtils {
+
+    private BuildInfoUtils() {
+    }
+
+    public static long getBuildDateTimestamp() {
+        return SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0);
+    }
+
+    public static String getBuildVersion() {
+        return SystemProperties.get(Constants.PROP_BUILD_VERSION);
     }
 }

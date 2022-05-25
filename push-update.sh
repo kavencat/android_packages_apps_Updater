@@ -6,7 +6,7 @@ if [ ! -f "$1" ]; then
    echo "Usage: $0 ZIP [UNVERIFIED]"
    echo "Push ZIP to $updates_dir and add it to Updater"
    echo
-   echo "The name of ZIP is assumed to have PixelPlusUi-VERSION-DATE-TYPE-* as format"
+   echo "The name of ZIP is assumed to have CHERISH-VERSION-DATE-TYPE-* as format"
    echo "If UNVERIFIED is set, the app will verify the update"
    exit
 fi
@@ -52,8 +52,8 @@ adb shell chgrp cache "$zip_path_device"
 adb shell chmod 664 "$zip_path_device"
 
 # Kill the app before updating the database
-adb shell "killall com.pixelplusui.updater 2>/dev/null"
-adb shell "sqlite3 /data/data/com.pixelplusui.updater/databases/updates.db" \
+adb shell "killall com.cherish.updater 2>/dev/null"
+adb shell "sqlite3 /data/data/com.cherish.updater/databases/updates.db" \
     "\"INSERT INTO updates (status, path, download_id, timestamp, type, version, size)" \
     "  VALUES ($status, '$zip_path_device', '$id', $timestamp, '$type', '$version', $size)\""
 

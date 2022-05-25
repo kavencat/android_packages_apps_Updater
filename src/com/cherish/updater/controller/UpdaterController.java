@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pixelplusui.updater.controller;
+package com.cherish.updater.controller;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,12 +24,12 @@ import android.util.Log;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.pixelplusui.updater.UpdatesDbHelper;
-import com.pixelplusui.updater.download.DownloadClient;
-import com.pixelplusui.updater.misc.Utils;
-import com.pixelplusui.updater.model.Update;
-import com.pixelplusui.updater.model.UpdateInfo;
-import com.pixelplusui.updater.model.UpdateStatus;
+import com.cherish.updater.UpdatesDbHelper;
+import com.cherish.updater.download.DownloadClient;
+import com.cherish.updater.misc.Utils;
+import com.cherish.updater.model.Update;
+import com.cherish.updater.model.UpdateInfo;
+import com.cherish.updater.model.UpdateStatus;
 
 import java.io.File;
 import java.io.IOException;

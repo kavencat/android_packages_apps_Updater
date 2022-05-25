@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pixelplusui.updater.misc;
+package com.cherish.updater.misc;
 
 import android.Manifest;
 import android.app.Activity;
